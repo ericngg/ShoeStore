@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:gravity="center"
-            android:text="Input your shoe in the format: &quot;name, company, shoe size, description&quot; of the shoe"
+            android:text="Have ready your name, company, shoe size, and description of the shoe"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"

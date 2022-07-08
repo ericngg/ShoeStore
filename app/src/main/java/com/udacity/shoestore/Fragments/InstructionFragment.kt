@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionBinding
 
@@ -20,7 +21,9 @@ class InstructionFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_instruction, container, false)
 
-        binding.btnNext.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_instructionFragment_to_shoeListFragment))
+        binding.btnNext.setOnClickListener{
+            findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeListFragment())
+        }
 
         return binding.root
     }
