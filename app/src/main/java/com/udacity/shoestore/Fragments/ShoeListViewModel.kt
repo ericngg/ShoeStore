@@ -25,6 +25,7 @@ class ShoeListViewModel : ViewModel() {
 
     }
 
+    // Method that adds shoe to shoe list
     fun add(shoe :Shoe) {
         _shoeList.add(shoe)
 

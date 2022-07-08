@@ -31,6 +31,7 @@ class ShoeDetailFragment : Fragment() {
         }
 
         binding.btnSave.setOnClickListener {
+            // Makes sure that none of the fields are empty
             if (binding.etInputName.text.isNotEmpty() && binding.etInputSize.text.isNotEmpty() &&
                 binding.etInputCompany.text.isNotEmpty() && binding.etInputDescription.text.isNotEmpty()) {
 
