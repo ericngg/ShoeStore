@@ -6,28 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
-    lateinit var btnSignUp :Button
-    lateinit var btnLogin :Button
-
-    // lateinit var binding: LoginFragmentBinding
+    lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        btnSignUp = view?.findViewById(R.id.btnSignUp)!!
-        btnLogin = view?.findViewById(R.id.btnLogin)!!
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
-        btnSignUp.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment))
+        binding.btnSignUp.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment))
+        binding.btnLogin.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment))
 
-        btnLogin.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment))
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+
+        return binding.root
     }
 }
